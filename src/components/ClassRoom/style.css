@@ -1,0 +1,23 @@
+.right-pane {
+    width: 200px;
+    height: auto;
+    background-color: #000;
+    position: absolute;
+    top: 5%;
+    right: 0;
+    color: #fff;
+    text-align: center;
+    padding: 30px;
+}
+.close-pane {
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #ccc;
+    right: -15px;
+    top: -15px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 35px;
+    cursor: pointer;
+}

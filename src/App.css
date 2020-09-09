@@ -1,0 +1,10 @@
+.App {
+  box-sizing: border-box;
+  margin: 50px auto;
+  width: 600px;
+  position: relative;
+}
+li {
+  margin-top: 10px;
+  cursor: pointer;
+}

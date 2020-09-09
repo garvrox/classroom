@@ -1,0 +1,43 @@
+.student_wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.student_wrap > li {
+    list-style: none;
+    cursor: pointer;
+    padding: 12px;
+    margin-right: 10px;
+    background-color: #F1F1F1;
+}
+
+.student_wrap > li:hover {
+    background-color: #ccc;
+}
+
+.student_content {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.student_content .tooltip {
+  visibility: hidden;
+  min-width: 150px;
+  background-color: black;
+  color: #fff;
+  text-align: left;
+  padding: 5px 10px;
+  border-radius: 6px;
+  position: absolute;
+  left: 95%;
+  z-index: 1;
+}
+
+.tooltip > label {
+    font-weight: 500;
+}
+
+.student_content:hover .tooltip {
+  visibility: visible;
+}

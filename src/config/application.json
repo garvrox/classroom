@@ -1,0 +1,8 @@
+{
+  "development": {
+    "studentManagement": "https://student-management-api-1u3cd4j7s.now.sh/"
+  },
+  "production": {
+    "studentManagement": "https://student-management-api-1u3cd4j7s.now.sh/"
+  }
+}

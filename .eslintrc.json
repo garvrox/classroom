@@ -1,0 +1,22 @@
+{
+  "extends": ["standard", "prettier"],
+  "plugins": ["standard", "react", "prettier"],
+  "rules": {
+    "react/jsx-uses-vars": "error",
+    "react/jsx-uses-react": "error",
+    "max-len": [
+      1,
+      100,
+      2,
+      {
+        "ignorePattern": "^import.*|^const.*|^export.*",
+        "ignoreUrls": true
+      }
+    ],
+    "prettier/prettier": "error"
+  },
+  "env": {
+    "node": true,
+    "browser": true
+  }
+}
