@@ -4,6 +4,38 @@ import { fetchStudents } from 'actions/classroomActions'
 import ClassSection from 'components/ClassSection'
 import './style.css'
 
+const RightPane = ({
+  setShowPane = () => {},
+  name,
+  age,
+  gender,
+  sports = []
+}) => {
+  return (
+    <div className='right-pane'>
+      <div className='close-pane' onClick={() => setShowPane(false)}>
+        X
+      </div>
+      <div>
+        <label>Name: </label>
+        <span>{name}</span>
+      </div>
+      <div>
+        <label>Age: </label>
+        <span>{age} Years</span>
+      </div>
+      <div>
+        <label>Gender: </label>
+        <span>{gender === 'F' ? 'Female' : 'Male'}</span>
+      </div>
+      <div>
+        <label>Sports: </label>
+        <span>{sports.join(', ')}</span>
+      </div>
+    </div>
+  )
+}
+
 const ClassRoom = ({
   fetchStudents = () => {},
   loading,
@@ -48,29 +80,7 @@ const ClassRoom = ({
           )
         })}
       </ul>
-      {showPane && (
-        <div className='right-pane'>
-          <div className='close-pane' onClick={() => setShowPane(false)}>
-            X
-          </div>
-          <div>
-            <label>Name: </label>
-            <span>{paneData.name}</span>
-          </div>
-          <div>
-            <label>Age: </label>
-            <span>{paneData.age} Years</span>
-          </div>
-          <div>
-            <label>Gender: </label>
-            <span>{paneData.gender === 'F' ? 'Female' : 'Male'}</span>
-          </div>
-          <div>
-            <label>Sports: </label>
-            <span>{paneData.sports.join(', ')}</span>
-          </div>
-        </div>
-      )}
+      {showPane && <RightPane setShowPane={setShowPane} {...paneData} />}
     </Fragment>
   )
 }
