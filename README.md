@@ -23,4 +23,4 @@ Node version should be greater than 12.16.0
 ## Tech Stack
 
 1. **Node.js**
-2. **React - (using create react app)** - Web Framework for Node.js
+2. **React - (using create react app)**
